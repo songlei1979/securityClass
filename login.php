@@ -20,11 +20,15 @@ if ($_POST["username"]){
         echo "connection success";
     }
 
-    $sql = "select * from Users where username = '$username' and password = '$password'";
+    $sql = "select * from Users where username = '$username'";
     echo $sql;
     $result = $conn->query($sql);
     if ($result->num_rows > 0){
-        echo "<p>You can see this</p>";
+        while ($row = $result->fetch_assoc()){
+            if (row["password"] == $password){
+                echo "you login";
+            }
+        }
     }else{
         echo "<p>You can't see anything</p>";
     }
