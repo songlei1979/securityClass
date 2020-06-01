@@ -12,6 +12,7 @@ if (! isset($_SESSION['csrf_token'])) {
 // Check a POST is valid.
 if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token']) {
     // POST data is valid.
+    echo $_POST['csrf_token'];
     echo $_POST['foo'];
 }
 ?>
