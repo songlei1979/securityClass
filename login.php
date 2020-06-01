@@ -21,6 +21,7 @@ if ($_POST["username"]){
     }
 
     $sql = "select * from Users where username = '$username' and password = '$password'";
+    echo $sql;
     $result = $conn->query($sql);
     if ($result->num_rows > 0){
         echo "<p>You can see this</p>";
