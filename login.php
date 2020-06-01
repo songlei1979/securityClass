@@ -25,7 +25,7 @@ if ($_POST["username"]){
     $result = $conn->query($sql);
     if ($result->num_rows > 0){
         while ($row = $result->fetch_assoc()){
-            if (row["password"] == $password){
+            if ($row["password"] == $password){
                 echo "you login";
                 session_start();
                 $_SESSION["username"] = $username;
