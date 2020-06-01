@@ -27,6 +27,8 @@ if ($_POST["username"]){
         while ($row = $result->fetch_assoc()){
             if (row["password"] == $password){
                 echo "you login";
+            }else{
+                echo "you cannot login";
             }
         }
     }else{
