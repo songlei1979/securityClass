@@ -1,0 +1,5 @@
+{
+    "require": {
+        "steveclifton/phpcsrftokens": "^1.4"
+    }
+}
